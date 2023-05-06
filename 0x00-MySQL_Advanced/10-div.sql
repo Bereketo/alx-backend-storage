@@ -5,9 +5,11 @@
 CREATE FUNCTION SafeDiv(a INT, b INT)
 RETURN INT
 BEGIN
+	DECLARE ans FLOAT;
 	IF b = 0 THEN
-		RETURN 0;
+		SET ans = 0;
 	ELSE
-		RETURN a/b;
+		SET ans = a / b;
 	END IF;
+	RETURN ans;
 END;

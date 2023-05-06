@@ -1,4 +1,4 @@
--- script that creates a function SafeDiv 
+-- Script that creates a function SafeDiv 
 -- divides (and returns) the first by the second number 
 -- or returns 0 if the second number is equal to 0
 

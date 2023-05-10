@@ -23,7 +23,7 @@ class Cache:
         self.id = str(uuid.uuid4())
         self._redis.set(self.id, data)
         return self.id
-   
+
     def get(self, key: str, fn: callable = None):
         """Converts the data back to the desired format """
         value = self._redis.get(key)
@@ -38,4 +38,3 @@ class Cache:
     def get_int(self, key: str) -> int:
         """returns int """
         return self.get(key, lambda x: int(x))
-
